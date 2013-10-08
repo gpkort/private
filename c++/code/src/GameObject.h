@@ -9,6 +9,8 @@
 #ifndef GAMEOBJECT_H
 #define	GAMEOBJECT_H
 
+
+
 class GameObject {
 public:
     void set_object_name(std::string objectName) {m_object_name = objectName;}

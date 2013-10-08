@@ -9,16 +9,21 @@
 #define	SHIPCOMPONENT_H
 
 #include "GameObject.h"
+#include <cstdlib>
 
-class shipComponent : GameObject{
+class ShipComponent : public GameObject {
 public:
-    shipComponent();
-    shipComponent(const shipComponent& orig);
-    virtual ~shipComponent();
+    ShipComponent();
+    ShipComponent(const ShipComponent& orig);
     
+    ShipComponent & operator=(const ShipComponent& shipComponent);
     
-    void f() {};
-private:
+    inline float get_cost() { return m_cost; };
+    inline void  set_cost(float cost) { m_cost = cost; };
+    
+    virtual ~ShipComponent();    
+    
+protected:
     float m_cost;
 };
 
