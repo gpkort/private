@@ -35,11 +35,16 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/_ext/202695825/CargoHold.o \
 	${OBJECTDIR}/_ext/202695825/DuarableComponent.o \
+	${OBJECTDIR}/_ext/202695825/Engine.o \
 	${OBJECTDIR}/_ext/202695825/FuelTank.o \
+	${OBJECTDIR}/_ext/202695825/LandingCraft.o \
+	${OBJECTDIR}/_ext/202695825/ManueveringComponent.o \
 	${OBJECTDIR}/_ext/202695825/Pad.o \
 	${OBJECTDIR}/_ext/202695825/ShipComponent.o \
 	${OBJECTDIR}/_ext/202695825/Strut.o \
+	${OBJECTDIR}/_ext/202695825/Thruster.o \
 	${OBJECTDIR}/_ext/202695825/main.o
 
 
@@ -67,15 +72,35 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/crashpad.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/crashpad ${OBJECTFILES} ${LDLIBSOPTIONS}
 
+${OBJECTDIR}/_ext/202695825/CargoHold.o: ../../../code/src/CargoHold.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/202695825
+	${RM} $@.d
+	$(COMPILE.cc) -g -Wall -I../../../code/inc -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/202695825/CargoHold.o ../../../code/src/CargoHold.cpp
+
 ${OBJECTDIR}/_ext/202695825/DuarableComponent.o: ../../../code/src/DuarableComponent.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/202695825
 	${RM} $@.d
 	$(COMPILE.cc) -g -Wall -I../../../code/inc -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/202695825/DuarableComponent.o ../../../code/src/DuarableComponent.cpp
 
+${OBJECTDIR}/_ext/202695825/Engine.o: ../../../code/src/Engine.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/202695825
+	${RM} $@.d
+	$(COMPILE.cc) -g -Wall -I../../../code/inc -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/202695825/Engine.o ../../../code/src/Engine.cpp
+
 ${OBJECTDIR}/_ext/202695825/FuelTank.o: ../../../code/src/FuelTank.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/202695825
 	${RM} $@.d
 	$(COMPILE.cc) -g -Wall -I../../../code/inc -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/202695825/FuelTank.o ../../../code/src/FuelTank.cpp
+
+${OBJECTDIR}/_ext/202695825/LandingCraft.o: ../../../code/src/LandingCraft.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/202695825
+	${RM} $@.d
+	$(COMPILE.cc) -g -Wall -I../../../code/inc -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/202695825/LandingCraft.o ../../../code/src/LandingCraft.cpp
+
+${OBJECTDIR}/_ext/202695825/ManueveringComponent.o: ../../../code/src/ManueveringComponent.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/202695825
+	${RM} $@.d
+	$(COMPILE.cc) -g -Wall -I../../../code/inc -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/202695825/ManueveringComponent.o ../../../code/src/ManueveringComponent.cpp
 
 ${OBJECTDIR}/_ext/202695825/Pad.o: ../../../code/src/Pad.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/202695825
@@ -91,6 +116,11 @@ ${OBJECTDIR}/_ext/202695825/Strut.o: ../../../code/src/Strut.cpp
 	${MKDIR} -p ${OBJECTDIR}/_ext/202695825
 	${RM} $@.d
 	$(COMPILE.cc) -g -Wall -I../../../code/inc -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/202695825/Strut.o ../../../code/src/Strut.cpp
+
+${OBJECTDIR}/_ext/202695825/Thruster.o: ../../../code/src/Thruster.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/202695825
+	${RM} $@.d
+	$(COMPILE.cc) -g -Wall -I../../../code/inc -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/202695825/Thruster.o ../../../code/src/Thruster.cpp
 
 ${OBJECTDIR}/_ext/202695825/main.o: ../../../code/src/main.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/202695825

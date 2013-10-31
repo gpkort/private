@@ -4,13 +4,18 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>../../../code/inc/CargoHold.h</itemPath>
       <itemPath>../../../code/inc/CrashPadUtils.h</itemPath>
       <itemPath>../../../code/inc/DurableComponent.h</itemPath>
+      <itemPath>../../../code/inc/Engine.h</itemPath>
       <itemPath>../../../code/inc/FuelTank.h</itemPath>
       <itemPath>../../../code/inc/GameObject.h</itemPath>
+      <itemPath>../../../code/inc/LandingCraft.h</itemPath>
+      <itemPath>../../../code/inc/ManueveringComponent.h</itemPath>
       <itemPath>../../../code/inc/Pad.h</itemPath>
       <itemPath>../../../code/inc/ShipComponent.h</itemPath>
       <itemPath>../../../code/inc/Strut.h</itemPath>
+      <itemPath>../../../code/inc/Thruster.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -19,11 +24,16 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>../../../code/src/CargoHold.cpp</itemPath>
       <itemPath>../../../code/src/DuarableComponent.cpp</itemPath>
+      <itemPath>../../../code/src/Engine.cpp</itemPath>
       <itemPath>../../../code/src/FuelTank.cpp</itemPath>
+      <itemPath>../../../code/src/LandingCraft.cpp</itemPath>
+      <itemPath>../../../code/src/ManueveringComponent.cpp</itemPath>
       <itemPath>../../../code/src/Pad.cpp</itemPath>
       <itemPath>../../../code/src/ShipComponent.cpp</itemPath>
       <itemPath>../../../code/src/Strut.cpp</itemPath>
+      <itemPath>../../../code/src/Thruster.cpp</itemPath>
       <itemPath>../../../code/src/main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -59,6 +69,8 @@
           <warningLevel>2</warningLevel>
         </ccTool>
       </compileType>
+      <item path="../../../code/inc/CargoHold.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../../../code/inc/CrashPadUtils.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../../code/inc/DurableComponent.h"
@@ -66,9 +78,18 @@
             tool="3"
             flavor2="0">
       </item>
+      <item path="../../../code/inc/Engine.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../../../code/inc/FuelTank.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../../code/inc/GameObject.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../../code/inc/LandingCraft.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../../code/inc/ManueveringComponent.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
       <item path="../../../code/inc/Pad.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -76,12 +97,25 @@
       </item>
       <item path="../../../code/inc/Strut.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="../../../code/inc/Thruster.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../../code/src/CargoHold.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="../../../code/src/DuarableComponent.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
+      <item path="../../../code/src/Engine.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="../../../code/src/FuelTank.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../../code/src/LandingCraft.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../../code/src/ManueveringComponent.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
       </item>
       <item path="../../../code/src/Pad.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -91,6 +125,8 @@
             flavor2="0">
       </item>
       <item path="../../../code/src/Strut.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../../code/src/Thruster.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../../code/src/main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -116,6 +152,8 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="../../../code/inc/CargoHold.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../../../code/inc/CrashPadUtils.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../../code/inc/DurableComponent.h"
@@ -123,9 +161,18 @@
             tool="3"
             flavor2="0">
       </item>
+      <item path="../../../code/inc/Engine.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../../../code/inc/FuelTank.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../../code/inc/GameObject.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../../code/inc/LandingCraft.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../../code/inc/ManueveringComponent.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
       <item path="../../../code/inc/Pad.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -133,12 +180,25 @@
       </item>
       <item path="../../../code/inc/Strut.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="../../../code/inc/Thruster.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../../code/src/CargoHold.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="../../../code/src/DuarableComponent.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
+      <item path="../../../code/src/Engine.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="../../../code/src/FuelTank.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../../code/src/LandingCraft.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../../code/src/ManueveringComponent.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
       </item>
       <item path="../../../code/src/Pad.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -148,6 +208,8 @@
             flavor2="0">
       </item>
       <item path="../../../code/src/Strut.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../../code/src/Thruster.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../../code/src/main.cpp" ex="false" tool="1" flavor2="0">
       </item>

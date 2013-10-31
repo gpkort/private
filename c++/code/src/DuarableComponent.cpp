@@ -1,6 +1,8 @@
 
 #include "DurableComponent.h"
 
+namespace Model
+{
 DurableComponent::DurableComponent() : m_durability_points(0.0F) {}
 
 DurableComponent::DurableComponent(const DurableComponent& orig) {
@@ -15,4 +17,5 @@ DurableComponent & DurableComponent::operator =(const DurableComponent& durableC
      this->m_durability_points = durableComponent.m_durability_points;
      
      return *this;
+}
 }

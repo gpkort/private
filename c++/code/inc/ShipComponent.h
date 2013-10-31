@@ -11,6 +11,8 @@
 #include "GameObject.h"
 #include <cstdlib>
 
+namespace Model
+{
 class ShipComponent : public GameObject {
 public:
     ShipComponent();
@@ -26,6 +28,6 @@ public:
 protected:
     float m_cost;
 };
-
+}
 #endif	/* SHIPCOMPONENT_H */
 

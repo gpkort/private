@@ -16,23 +16,23 @@ namespace Model
 {
     class ManueveringComponent : public ShipComponent {
     public:
-        ManueveringComponent();
-        ManueveringComponent(const ManueveringComponent& orig);
-        ManueveringComponent & operator=(const ManueveringComponent& comp);
+        ManueveringComponent() {};
         virtual ~ManueveringComponent();
         
         inline double get_max_thrust() {return m_max_thrust; }
         inline double get_percent_thrust() { return m_percent_thrust; }
         
-        inline ENGINE_TYPE get_engine_type() { return m_engine_type; }
-        inline void set_engine_type(ENGINE_TYPE engineType) {m_engine_type = engineType;};
+        virtual ENGINE_TYPE get_engine_type() = 0;
+        virtual void set_engine_type(ENGINE_TYPE engineType) = 0;
         
-        void insert_thrust_curve_point(double fuel, double thrust);
+        bool insert_thrust_curve_point(int percentThrust, double burnRate);
         bool set_max_thrust(double thrust);
         bool set_percent_thrust(double thrust);
+        double get_burn_rate(int percentOfThrust);
         
-    private:
-        std::map<double, double> m_thrust_curve;
+        
+    protected:
+        std::map<int, double>    m_thrust_curve; //first value is % of total thrust, second burn rate
         DirectionVector          m_nozzel_direction;
         double                   m_max_thrust;
         double                   m_percent_thrust;

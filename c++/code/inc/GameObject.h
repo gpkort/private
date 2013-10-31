@@ -12,6 +12,7 @@
 #include <cstdlib>
 #include <string>
 
+namespace Model {
 class GameObject {
 public:
     inline void set_object_name(std::string objectName) {m_object_name = objectName;}
@@ -44,6 +45,6 @@ protected:
     unsigned int        m_object_id;
     double              m_object_mass;
 };
-
+}
 #endif	/* GAMEOBJECT_H */
 

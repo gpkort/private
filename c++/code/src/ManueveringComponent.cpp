@@ -9,37 +9,56 @@
 
 namespace Model
 {
-    ManueveringComponent::ManueveringComponent() : m_max_thrust(0.0), m_percent_thrust(0.0) {
-        m_nozzel_direction.x = 0.0;
-        m_nozzel_direction.y = 0.0;
-        m_nozzel_direction.z = 0.0;        
-    }
-
-    ManueveringComponent::ManueveringComponent(const ManueveringComponent& orig) {
-        m_thrust_curve     = orig.m_thrust_curve;
-        m_max_thrust       = orig.m_max_thrust;
-        m_percent_thrust   = orig.m_percent_thrust;
-        m_nozzel_direction = orig.m_nozzel_direction;
-    }
-
-    ManueveringComponent::~ManueveringComponent() { }
-    
-    ManueveringComponent & ManueveringComponent::operator =(const ManueveringComponent& comp) {
-        m_thrust_curve     = comp.m_thrust_curve;
-        m_max_thrust       = comp.m_max_thrust;
-        m_percent_thrust   = comp.m_percent_thrust;
-        m_nozzel_direction = comp.m_nozzel_direction;
-        
-        return *this;
-    }
+   ManueveringComponent::~ManueveringComponent() { }
     
     bool ManueveringComponent::set_max_thrust(double thrust) {
         bool retval = false;
         
-        if(static_cast<int>(thrust) >= 0) {
+        if(thrust >= 0) {
             retval = true;
             m_max_thrust = thrust; 
-       }
+       }        
+        return retval;
+    }
+    
+    bool ManueveringComponent::set_percent_thrust(double thrust) {
+        bool retval = false;
+        
+        if(thrust >= 0) {
+            retval = true;
+            m_percent_thrust = thrust; 
+       }        
+        return retval;
+    }
+    
+    bool ManueveringComponent::insert_thrust_curve_point(int percentThrust, double burnRate) {
+        std::pair<std::map<int, double>::iterator, bool> ret;
+        m_thrust_curve.insert(std::pair<int, double>(percentThrust, burnRate));
+        return ret.second;
+    }
+    
+    double ManueveringComponent::get_burn_rate(int percentOfThrust) {
+        double retval = -1.0;
+        
+        if(!m_thrust_curve.empty()) {
+            std::map<int, double>::iterator itr = m_thrust_curve.find(percentOfThrust);
+            if( itr != m_thrust_curve.end()) 
+                retval = itr->second;
+            else {
+                double x0, y0, x1, y1;
+                itr = m_thrust_curve.lower_bound(percentOfThrust);
+                x0 = itr->first;
+                y0= itr->second;
+                itr = m_thrust_curve.upper_bound(percentOfThrust);
+                x1 = itr->first;
+                y1= itr->second;
+                
+                double m = (y1-y0) / (x1- x0);
+                double b = y0 - (m*x0);
+                retval = percentOfThrust * m + b;
+            }
+        }
+        return retval;
     }
 
 }

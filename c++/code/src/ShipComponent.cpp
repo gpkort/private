@@ -7,6 +7,8 @@
 
 #include "ShipComponent.h"
 
+namespace Model
+{
 ShipComponent::ShipComponent() {
     m_cost = 0.0f;
 }
@@ -23,5 +25,6 @@ ShipComponent & ShipComponent::operator =(const ShipComponent& shipComponent) {
      m_cost = shipComponent.m_cost;
      
      return *this;
+}
 }
 

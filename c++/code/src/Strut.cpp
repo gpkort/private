@@ -8,6 +8,8 @@
 #include "Strut.h"
 #include "DurableComponent.h"
 
+namespace Model
+{
 Strut::Strut() : m_length(0.0){ }
 
 Strut::Strut(const Strut& orig) {
@@ -20,5 +22,6 @@ Strut::~Strut() { }
 Strut& Strut::operator =(const Strut& strut) {
     DurableComponent::operator =(static_cast<DurableComponent const&>(strut));
     return *this;
+}
 }
 

@@ -10,6 +10,8 @@
 
 #include "ShipComponent.h"
 
+namespace Model
+{
 class DurableComponent : public ShipComponent {
 public:
     DurableComponent();
@@ -23,6 +25,7 @@ public:
 private:
     int m_durability_points;
 };
+}
 
 
 

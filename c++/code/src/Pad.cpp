@@ -7,6 +7,8 @@
 
 #include "Pad.h"
 
+namespace Model
+{
 Pad::Pad() : m_pad_area(0.0) { }
 
 Pad::Pad(const Pad& orig) {
@@ -22,4 +24,5 @@ Pad& Pad::operator =(const Pad& pad) {
 }
 
 Pad::~Pad() { }
+}
 

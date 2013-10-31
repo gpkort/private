@@ -10,6 +10,8 @@
 
 #include "DurableComponent.h"
 
+namespace Model 
+{
 class Pad : public DurableComponent 
 {
 public:
@@ -23,6 +25,6 @@ public:
 private:
     double m_pad_area;
 };
-
+}
 #endif	/* PAD_H */
 
