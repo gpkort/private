@@ -13,11 +13,12 @@ FuelTank::FuelTank(): m_total_capacity(0.0), m_current_amount(0.0),
                       m_fuel_type(FUEL_TYPE::UNDEFINED_FUEL) 
 {}
 
-FuelTank::FuelTank(const FuelTank& orig) {
+FuelTank::FuelTank(const FuelTank& orig) :    
+    m_total_capacity(orig.m_total_capacity),
+    m_current_amount(orig.m_current_amount),
+    m_fuel_type(orig.m_fuel_type)
+{
     FuelTank::DurableComponent(static_cast<DurableComponent const&>(orig));
-    m_total_capacity = orig.m_total_capacity;
-    m_current_amount = orig.m_current_amount;
-    m_fuel_type      = orig.m_fuel_type;
 }
 
 FuelTank::~FuelTank() {}

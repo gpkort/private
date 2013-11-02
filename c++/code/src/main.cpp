@@ -9,9 +9,11 @@
 #include <iostream>
 #include "DurableComponent.h"
 #include <map>
+#include "LandingCraft.h"
 
 
 using namespace std;
+using namespace Model;
 
 /*
  * 
@@ -23,16 +25,7 @@ int main(int argc, char** argv) {
     dc1 = dc;
     cout << "Hey : " << dc1.get_object_name() << endl;
     
-    map<float, float> test_map;
-    test_map[2.0f] = 4.0f;
-    test_map[1.0f] = 2.0f;
-    test_map[4.0f] = 8.0f;
-    test_map[3.0f] = 6.0f;
-    
-    map<float, float>::iterator itr;
-    for(itr = test_map.begin(); itr != test_map.end(); itr++) {
-        cout << "x:" << itr->first << ", y:" << itr->second << endl;
-    }
+    LandingCraft lc;
     
     return 0;
 }

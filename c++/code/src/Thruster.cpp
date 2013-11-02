@@ -26,6 +26,8 @@ Thruster & Thruster::operator =(const Thruster& thruster) {
    m_engine_type      = thruster.m_engine_type;
    m_max_thrust       = thruster.m_max_thrust;
    m_percent_thrust   = thruster.m_percent_thrust;
+   
+   return *this;
 }
 
 Thruster::~Thruster() {

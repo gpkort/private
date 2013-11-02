@@ -12,9 +12,8 @@ namespace Model
 {
 Strut::Strut() : m_length(0.0){ }
 
-Strut::Strut(const Strut& orig) {
-    Strut::DurableComponent(static_cast<DurableComponent const&>(orig));
-    m_length = orig.m_length;
+Strut::Strut(const Strut& orig):  m_length(orig.m_length) {
+    Strut::DurableComponent(static_cast<DurableComponent const&>(orig));   
 }
 
 Strut::~Strut() { }

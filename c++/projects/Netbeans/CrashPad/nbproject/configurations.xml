@@ -65,7 +65,7 @@
           <incDir>
             <pElem>../../../code/inc</pElem>
           </incDir>
-          <commandLine>-static-libgcc -static-libstdc++ -std=c++0x</commandLine>
+          <commandLine>-static-libgcc -static-libstdc++ -std=c++0x -Weffc++</commandLine>
           <warningLevel>2</warningLevel>
         </ccTool>
       </compileType>

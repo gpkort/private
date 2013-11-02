@@ -11,9 +11,8 @@ namespace Model
 {
 Pad::Pad() : m_pad_area(0.0) { }
 
-Pad::Pad(const Pad& orig) {
+Pad::Pad(const Pad& orig) : m_pad_area(orig.m_pad_area) {
     Pad::DurableComponent(static_cast<DurableComponent const&>(orig));
-    m_pad_area = orig.m_pad_area;
 }
 
 Pad& Pad::operator =(const Pad& pad) {

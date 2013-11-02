@@ -10,11 +10,12 @@
 namespace Model {
 CargoHold::CargoHold() : m_max_mass(0.0), m_current_mass(0.0), m_volume(0.0) {}
 
-CargoHold::CargoHold(const CargoHold& orig) {
+CargoHold::CargoHold(const CargoHold& orig) : 
+         m_max_mass(orig.m_max_mass),
+         m_current_mass(orig.m_current_mass),
+         m_volume(orig.m_volume)
+{
     CargoHold::DurableComponent(static_cast<DurableComponent const&>(orig));
-    m_max_mass     = orig.m_max_mass;
-    m_current_mass = orig.m_current_mass;
-    m_volume       = orig.m_volume;
 }
 
 CargoHold::~CargoHold() {}

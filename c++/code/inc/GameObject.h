@@ -25,11 +25,11 @@ public:
     inline double get_object_mass() { return m_object_mass; }
     
     GameObject() : m_object_name(""), m_object_id(0), m_object_mass(0.0){ };
-    GameObject(const GameObject& other) {
-        m_object_name = other.m_object_name;
-        m_object_id   = other.m_object_id;
-        m_object_mass = other.m_object_mass;
-    }
+    GameObject(const GameObject& other) :
+        m_object_name(other.m_object_name),
+        m_object_id(other.m_object_id),
+        m_object_mass(other.m_object_mass)
+        {}
     
     GameObject & operator=(const GameObject& gameObject) {
         m_object_name = gameObject.m_object_name;

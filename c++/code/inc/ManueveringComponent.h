@@ -16,7 +16,13 @@ namespace Model
 {
     class ManueveringComponent : public ShipComponent {
     public:
-        ManueveringComponent() {};
+        ManueveringComponent() :
+                m_thrust_curve(),
+                m_nozzel_direction(),
+                m_max_thrust(0.0),
+                m_percent_thrust(0.0),
+                m_engine_type(UNDEFINED_ENGINE)
+        {};
         virtual ~ManueveringComponent();
         
         inline double get_max_thrust() {return m_max_thrust; }
