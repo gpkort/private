@@ -9,7 +9,7 @@
 
 namespace Model
 {
-Engine::Engine() { m_engine_type = ENGINE_TYPE::LANDING;}
+Engine::Engine() { m_engine_type = LANDING;}
 
 Engine::~Engine() {}
 

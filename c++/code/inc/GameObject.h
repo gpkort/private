@@ -25,6 +25,11 @@ public:
     inline double get_object_mass() { return m_object_mass; }
     
     GameObject() : m_object_name(""), m_object_id(0), m_object_mass(0.0){ };
+    
+    GameObject(std::string name, unsigned int id, double mass) :
+        m_object_name(name), m_object_id(id), m_object_mass(mass) 
+    { };
+        
     GameObject(const GameObject& other) :
         m_object_name(other.m_object_name),
         m_object_id(other.m_object_id),

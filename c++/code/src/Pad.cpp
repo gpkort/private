@@ -11,6 +11,11 @@ namespace Model
 {
 Pad::Pad() : m_pad_area(0.0) { }
 
+Pad::Pad(std::string name, unsigned int id, double mass, float cost, int points, double area) 
+        : m_pad_area(area) 
+{
+    Pad::DurableComponent(name, id, mass, cost, points);
+}
 Pad::Pad(const Pad& orig) : m_pad_area(orig.m_pad_area) {
     Pad::DurableComponent(static_cast<DurableComponent const&>(orig));
 }

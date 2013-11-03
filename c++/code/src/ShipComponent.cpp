@@ -11,6 +11,10 @@ namespace Model
 {
 ShipComponent::ShipComponent() : m_cost(0.0) { }
 
+ShipComponent::ShipComponent(std::string name, unsigned int id, double mass, float cost) 
+        : GameObject(name, id, mass), m_cost(cost)
+{ }
+
 ShipComponent::ShipComponent(const ShipComponent& orig) : m_cost(orig.m_cost) {
     ShipComponent::GameObject(static_cast<GameObject const&>(orig));    
 }

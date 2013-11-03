@@ -17,6 +17,7 @@ class ShipComponent : public GameObject {
 public:
     ShipComponent();
     ShipComponent(const ShipComponent& orig);
+    ShipComponent(std::string name, unsigned int id, double mass, float cost);
     
     ShipComponent & operator=(const ShipComponent& shipComponent);
     

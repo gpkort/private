@@ -15,14 +15,10 @@ enum ENGINE_TYPE {UNDEFINED_ENGINE = 0, MANEUVER, LANDING};
 struct DirectionVector { 
     double x, y, z;
     
-    DirectionVector() {
-        x = y = z = 0.0;
-    }
-    DirectionVector(const DirectionVector& orig) {
-        x = orig.x;
-        y = orig.y;
-        z = orig.z;
-    }
+    DirectionVector() : x(0.0), y(0.0), z(0.0) {  }
+    DirectionVector(const DirectionVector& orig) :
+        x(orig.x), y(orig.y), z(orig.z)
+    { }
     
     DirectionVector& operator=(const DirectionVector& dv) {
         x = dv.x;

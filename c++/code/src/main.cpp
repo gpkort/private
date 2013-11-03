@@ -25,7 +25,7 @@ int main(int argc, char** argv) {
     dc1 = dc;
     cout << "Hey : " << dc1.get_object_name() << endl;
     
-    LandingCraft lc;
+    LandingCraft lc(9.8);
     
     return 0;
 }

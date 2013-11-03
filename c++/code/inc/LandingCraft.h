@@ -24,7 +24,7 @@ public:
     static const int MAX_NUM_OF_LANDING_GEAR = 4;
     
 public:
-    LandingCraft();
+    LandingCraft(double gravityAcceleration);
     LandingCraft(const LandingCraft& orig);
     virtual ~LandingCraft();
     LandingCraft & operator =(const LandingCraft& landingCraft);
@@ -35,9 +35,11 @@ public:
     inline std::vector<Strut>& get_struts() { return m_struts; }
     inline FuelTank& get_fuel_tank() { return m_fuel_tank; }
     inline CargoHold& get_cargo_hold() {return m_cargo_hold; }
+    inline double get_gravity_acceleration() { return m_gravity_acceleration; }
+    inline double get_altitude() { return m_altitude; }
     
     void init_craft();
-    
+    void set_position(double thrust);   
     
     
 protected:
@@ -48,7 +50,8 @@ private:
     std::vector<Strut> m_struts;
     FuelTank           m_fuel_tank;
     CargoHold          m_cargo_hold;
-    
+    double             m_gravity_acceleration;
+    double             m_altitude;
 };
 }
 

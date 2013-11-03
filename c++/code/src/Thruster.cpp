@@ -9,7 +9,7 @@
 namespace Model
 {
 Thruster::Thruster() {
-   m_engine_type    = ENGINE_TYPE::MANEUVER;
+   m_engine_type    = MANEUVER;
    m_max_thrust     = 0.0;
    m_percent_thrust = 0.0;
 }

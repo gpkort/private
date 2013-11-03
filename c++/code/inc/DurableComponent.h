@@ -14,7 +14,8 @@ namespace Model
 {
 class DurableComponent : public ShipComponent {
 public:
-    DurableComponent();
+    DurableComponent ();
+    DurableComponent(std::string name, unsigned int id, double mass, float cost, int points);
     DurableComponent(const DurableComponent& orig);
     DurableComponent & operator=(const DurableComponent& durableComponent);
     
