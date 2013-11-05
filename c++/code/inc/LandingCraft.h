@@ -26,7 +26,7 @@ public:
 public:
     LandingCraft(double gravityAcceleration);
     LandingCraft(const LandingCraft& orig);
-    virtual ~LandingCraft();
+    ~LandingCraft();
     LandingCraft & operator =(const LandingCraft& landingCraft);
     
     inline void set_object_mass(const double objectMass){};
@@ -39,7 +39,7 @@ public:
     inline double get_altitude() { return m_altitude; }
     
     void init_craft();
-    void set_position(double thrust);   
+    void set_position(double thrust, double timedelta);   
     
     
 protected:

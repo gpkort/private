@@ -21,8 +21,12 @@ public:
     
     Engine & operator =(const Engine& engine);
     
-    virtual ENGINE_TYPE get_engine_type() {return m_engine_type;};
+    //virtual ENGINE_TYPE get_engine_type() {return m_engine_type;};
     virtual void set_engine_type(ENGINE_TYPE engineType) {};
+    
+//    void get_amount_consumed(double throttlePercent, double timedelta) {
+//        //
+//    }
     
     
     

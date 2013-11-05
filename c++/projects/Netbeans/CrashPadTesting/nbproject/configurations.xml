@@ -27,6 +27,7 @@
       <itemPath>../../../code/src/CargoHold.cpp</itemPath>
       <itemPath>../../../code/src/DuarableComponent.cpp</itemPath>
       <itemPath>../../../code/src/Engine.cpp</itemPath>
+      <itemPath>EngineTesting.cpp</itemPath>
       <itemPath>../../../code/src/FuelTank.cpp</itemPath>
       <itemPath>FuelTankTesting.cpp</itemPath>
       <itemPath>../../../code/src/LandingCraft.cpp</itemPath>
@@ -135,6 +136,8 @@
       </item>
       <item path="../../../code/src/Thruster.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="EngineTesting.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="FuelTankTesting.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="PadTesting.cpp" ex="false" tool="1" flavor2="0">
@@ -221,6 +224,8 @@
       <item path="../../../code/src/Strut.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../../code/src/Thruster.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="EngineTesting.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="FuelTankTesting.cpp" ex="false" tool="1" flavor2="0">
       </item>

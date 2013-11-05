@@ -52,6 +52,13 @@ void LandingCraft::init_craft() {
     for(sitr = m_struts.begin(); sitr != m_struts.end(); ++sitr) {
         m_object_mass += sitr->get_object_mass();
     }
+    
+    m_object_mass += m_cargo_hold.get_object_mass();
+    m_object_mass += m_fuel_tank.get_object_mass();
+}
+
+void LandingCraft::set_position(double thrust, double timedelta) {
+    //double acceleration = 
 }
 
 

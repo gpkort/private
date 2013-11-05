@@ -21,7 +21,7 @@ public:
     
     Thruster & operator =(const Thruster& thruster);
     
-    virtual ENGINE_TYPE get_engine_type() {return m_engine_type;};
+    //virtual ENGINE_TYPE get_engine_type() {return m_engine_type;};
     virtual void set_engine_type(ENGINE_TYPE engineType) {};
 private:
 

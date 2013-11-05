@@ -28,13 +28,14 @@ namespace Model
         inline double get_max_thrust() {return m_max_thrust; }
         inline double get_percent_thrust() { return m_percent_thrust; }
         
-        virtual ENGINE_TYPE get_engine_type() = 0;
+        virtual ENGINE_TYPE get_engine_type() { return m_engine_type; };
         virtual void set_engine_type(ENGINE_TYPE engineType) = 0;
         
         bool insert_thrust_curve_point(int percentThrust, double burnRate);
         bool set_max_thrust(double thrust);
         bool set_percent_thrust(double thrust);
         double get_burn_rate(int percentOfThrust);
+        double get_amount_consumed(double throttlePercent, double timedelta);
         
         
     protected:

@@ -45,6 +45,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/202695825/ShipComponent.o \
 	${OBJECTDIR}/_ext/202695825/Strut.o \
 	${OBJECTDIR}/_ext/202695825/Thruster.o \
+	${OBJECTDIR}/EngineTesting.o \
 	${OBJECTDIR}/FuelTankTesting.o \
 	${OBJECTDIR}/PadTesting.o \
 	${OBJECTDIR}/main.o
@@ -123,6 +124,11 @@ ${OBJECTDIR}/_ext/202695825/Thruster.o: ../../../code/src/Thruster.cpp
 	${MKDIR} -p ${OBJECTDIR}/_ext/202695825
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/202695825/Thruster.o ../../../code/src/Thruster.cpp
+
+${OBJECTDIR}/EngineTesting.o: EngineTesting.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/EngineTesting.o EngineTesting.cpp
 
 ${OBJECTDIR}/FuelTankTesting.o: FuelTankTesting.cpp 
 	${MKDIR} -p ${OBJECTDIR}

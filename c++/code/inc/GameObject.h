@@ -21,8 +21,8 @@ public:
     inline void set_object_id(unsigned int objectID) { m_object_id = objectID; }
     inline unsigned int get_object_id() { return m_object_id; }
     
-    inline void set_object_mass(double objectMass) { m_object_mass = objectMass; }
-    inline double get_object_mass() { return m_object_mass; }
+    virtual void set_object_mass(double objectMass) { m_object_mass = objectMass; }
+    virtual double get_object_mass() { return m_object_mass; }
     
     GameObject() : m_object_name(""), m_object_id(0), m_object_mass(0.0){ };
     

@@ -6,12 +6,7 @@ using namespace Model;
 using namespace testing;
 
 TEST(FuelMassTest, ConstructorTest) {
-    /*
-     (std::string name, unsigned int id, double mass, float cost,
-                   int points, double capacity, double currentAmount, 
-                   FUEL_TYPE fuelType, double fuelDensity)
-     */
-    FuelTank myTank("TestTank", 1, 50, 500.00f, 100, 25, 1.0, LIQUID, 1);
+   FuelTank myTank("TestTank", 1, 50, 500.00f, 100, 25, 1.0, LIQUID, 1);
     double mass = 50 + 25.0 * 1 * 1.0;
     double omass = myTank.get_object_mass();
     
