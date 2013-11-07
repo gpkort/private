@@ -33,6 +33,8 @@ FuelTank::FuelTank(const FuelTank& orig) :
 FuelTank::~FuelTank() {}
 
 FuelTank& FuelTank::operator =(const FuelTank& fuelTank) {
+    if(this == &fuelTank) return *this;
+    
      DurableComponent::operator =(static_cast<DurableComponent const&>(fuelTank));
       m_total_capacity = fuelTank.m_total_capacity;
       m_current_amount = fuelTank.m_current_amount;

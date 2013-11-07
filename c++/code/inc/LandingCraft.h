@@ -15,6 +15,7 @@
 #include "CargoHold.h"
 #include "FuelTank.h"
 #include "Strut.h"
+#include "Thruster.h"
 
 namespace Model
 {
@@ -37,21 +38,23 @@ public:
     inline CargoHold& get_cargo_hold() {return m_cargo_hold; }
     inline double get_gravity_acceleration() { return m_gravity_acceleration; }
     inline double get_altitude() { return m_altitude; }
+    inline std::vector<Thruster> get_thrusters() { return m_thrusters; }
     
     void init_craft();
-    void set_position(double thrust, double timedelta);   
+    double get_position(double percentOfThrust, double timedelta);   
     
     
 protected:
     
     
 private:
-    std::vector<Pad>   m_pads;
-    std::vector<Strut> m_struts;
-    FuelTank           m_fuel_tank;
-    CargoHold          m_cargo_hold;
-    double             m_gravity_acceleration;
-    double             m_altitude;
+    std::vector<Pad>      m_pads;
+    std::vector<Strut>    m_struts;
+    std::vector<Thruster> m_thrusters;
+    FuelTank              m_fuel_tank;
+    CargoHold             m_cargo_hold;
+    double                m_gravity_acceleration;
+    double                m_altitude;
 };
 }
 

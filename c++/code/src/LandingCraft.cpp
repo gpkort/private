@@ -12,6 +12,7 @@ namespace Model {
 LandingCraft::LandingCraft(double gravityAcceleration) :
         m_pads(),
         m_struts(),
+        m_thrusters(),
         m_fuel_tank(),
         m_cargo_hold(),
         m_gravity_acceleration(gravityAcceleration),
@@ -21,6 +22,7 @@ LandingCraft::LandingCraft(double gravityAcceleration) :
 LandingCraft::LandingCraft(const LandingCraft& orig) :
         m_pads(orig.m_pads),
         m_struts(orig.m_struts),
+        m_thrusters(orig.m_thrusters),
         m_fuel_tank(orig.m_fuel_tank),
         m_cargo_hold(orig.m_cargo_hold),
         m_gravity_acceleration(orig.m_gravity_acceleration),
@@ -32,10 +34,13 @@ LandingCraft::LandingCraft(const LandingCraft& orig) :
 LandingCraft::~LandingCraft() {}
 
 LandingCraft & LandingCraft::operator =(const LandingCraft& landingCraft) {
+    if(this == &landingCraft) return *this;
+    
     GameObject::operator =(static_cast<GameObject const&>(landingCraft));
     
     m_pads       = landingCraft.m_pads;
     m_struts     = landingCraft.m_struts;
+    m_thrusters  = landingCraft.m_thrusters;
     m_fuel_tank  = landingCraft.m_fuel_tank;
     m_cargo_hold = landingCraft.m_cargo_hold;
     
@@ -53,12 +58,18 @@ void LandingCraft::init_craft() {
         m_object_mass += sitr->get_object_mass();
     }
     
+    vector<Thruster>::iterator titr;
+    for(titr = m_thrusters.begin(); titr != m_thrusters.end(); ++titr) {
+        m_object_mass += titr->get_object_mass();
+    }
+    
     m_object_mass += m_cargo_hold.get_object_mass();
     m_object_mass += m_fuel_tank.get_object_mass();
 }
 
-void LandingCraft::set_position(double thrust, double timedelta) {
+double LandingCraft::get_position(double percentOfThrust, double timedelta) {
     //double acceleration = 
+    return 0.0;
 }
 
 

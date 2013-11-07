@@ -19,6 +19,8 @@ Strut::Strut(const Strut& orig):  m_length(orig.m_length) {
 Strut::~Strut() { }
 
 Strut& Strut::operator =(const Strut& strut) {
+    if(this == &strut) return *this;
+    
     DurableComponent::operator =(static_cast<DurableComponent const&>(strut));
     return *this;
 }

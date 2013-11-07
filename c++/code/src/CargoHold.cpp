@@ -21,6 +21,8 @@ CargoHold::CargoHold(const CargoHold& orig) :
 CargoHold::~CargoHold() {}
 
 CargoHold & CargoHold::operator =(const CargoHold& cargoHold) {
+    if(this == &cargoHold) return *this;
+    
     DurableComponent::operator =(static_cast<DurableComponent const&>(cargoHold));
     m_max_mass     = cargoHold.m_max_mass;
     m_current_mass = cargoHold.m_current_mass;

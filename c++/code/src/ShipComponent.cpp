@@ -22,6 +22,8 @@ ShipComponent::ShipComponent(const ShipComponent& orig) : m_cost(orig.m_cost) {
 ShipComponent::~ShipComponent() { }
 
 ShipComponent & ShipComponent::operator =(const ShipComponent& shipComponent) {
+    if(this == &shipComponent) return *this;
+    
      GameObject::operator =(static_cast<GameObject const&>(shipComponent));
      m_cost = shipComponent.m_cost;
      

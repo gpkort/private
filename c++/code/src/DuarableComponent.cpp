@@ -19,6 +19,8 @@ DurableComponent::DurableComponent(const DurableComponent& orig) :
 DurableComponent::~DurableComponent() {};
 
 DurableComponent & DurableComponent::operator =(const DurableComponent& durableComponent) {
+    if(this == &durableComponent) return *this;
+    
      GameObject::operator =(static_cast<GameObject const&>(durableComponent));
      this->m_durability_points = durableComponent.m_durability_points;
      

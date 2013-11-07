@@ -19,6 +19,8 @@ Pad::Pad(const Pad& orig) : m_pad_area(orig.m_pad_area) {
 }
 
 Pad& Pad::operator =(const Pad& pad) {
+    if(this == &pad) return *this;
+    
      DurableComponent::operator =(static_cast<DurableComponent const&>(pad));
      m_pad_area = pad.m_pad_area;
      
