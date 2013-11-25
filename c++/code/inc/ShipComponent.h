@@ -16,10 +16,12 @@ namespace Model
 class ShipComponent : public GameObject {
 public:
     ShipComponent();
+    ShipComponent(unsigned int id);
     ShipComponent(const ShipComponent& orig);
     ShipComponent(std::string name, unsigned int id, double mass, float cost);
     
     ShipComponent & operator=(const ShipComponent& shipComponent);
+    bool operator==(ShipComponent& rhs) const;
     
     inline float get_cost() { return m_cost; };
     inline void  set_cost(float cost) { m_cost = cost; };

@@ -24,7 +24,10 @@ public:
     virtual void set_object_mass(double objectMass) { m_object_mass = objectMass; }
     virtual double get_object_mass() { return m_object_mass; }
     
+        
     GameObject() : m_object_name(""), m_object_id(0), m_object_mass(0.0){ };
+    
+    GameObject(unsigned int id) : m_object_name(""), m_object_id(id), m_object_mass(0.0){ };
     
     GameObject(std::string name, unsigned int id, double mass) :
         m_object_name(name), m_object_id(id), m_object_mass(mass) 
@@ -42,6 +45,15 @@ public:
         m_object_mass = gameObject.m_object_mass;
         return(*this);
     }
+    
+    bool operator==(GameObject& rhs) const {
+        return (
+            m_object_name == rhs.m_object_name &&
+            m_object_id   == rhs.m_object_id &&
+            m_object_mass == rhs.m_object_mass
+        );        
+    }
+    
     
     virtual ~GameObject() {};
     

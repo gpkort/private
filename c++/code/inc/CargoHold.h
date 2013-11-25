@@ -1,6 +1,6 @@
 /* 
  * File:   CargoHold.h
- * Author: Jack
+ * Author: Greg
  *
  * Created on October 11, 2013, 9:37 AM
  */
@@ -14,6 +14,7 @@ namespace Model {
 class CargoHold : public DurableComponent {
 public:
     CargoHold();
+    CargoHold(unsigned int id);
     CargoHold(const CargoHold& orig);
     CargoHold & operator=(const CargoHold& cargoHold);
     virtual ~CargoHold();

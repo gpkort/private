@@ -16,9 +16,11 @@ class Pad : public DurableComponent
 {
 public:
     Pad();
+    Pad(unsigned int id);
     Pad(std::string name, unsigned int id, double mass, float cost, int points, double area);
     Pad(const Pad& orig);
     Pad & operator=(const Pad& pad);
+    bool operator==(Pad& rhs) const;
     virtual ~Pad();
     
     inline void   set_pad_area(double padArea){ m_pad_area = padArea; }

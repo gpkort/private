@@ -31,6 +31,7 @@
       <itemPath>../../../code/src/FuelTank.cpp</itemPath>
       <itemPath>FuelTankTesting.cpp</itemPath>
       <itemPath>../../../code/src/LandingCraft.cpp</itemPath>
+      <itemPath>LandingCraftTesting.cpp</itemPath>
       <itemPath>../../../code/src/ManueveringComponent.cpp</itemPath>
       <itemPath>../../../code/src/Pad.cpp</itemPath>
       <itemPath>PadTesting.cpp</itemPath>
@@ -140,6 +141,8 @@
       </item>
       <item path="FuelTankTesting.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="LandingCraftTesting.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="PadTesting.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
@@ -228,6 +231,8 @@
       <item path="EngineTesting.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="FuelTankTesting.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LandingCraftTesting.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="PadTesting.cpp" ex="false" tool="1" flavor2="0">
       </item>

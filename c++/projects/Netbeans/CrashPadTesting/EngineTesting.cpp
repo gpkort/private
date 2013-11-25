@@ -120,3 +120,4 @@ TEST(EngineThrustCurve, FullCurveOutsideUpperPoint) {
         
     ASSERT_THAT(engine.get_thrust(75), 33750);
 }
+

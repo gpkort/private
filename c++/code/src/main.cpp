@@ -20,6 +20,7 @@ using namespace Model;
  */
 int main(int argc, char** argv) {
     Model::DurableComponent dc, dc1;
+   
     
     dc.set_object_name("Blah");
     dc1 = dc;

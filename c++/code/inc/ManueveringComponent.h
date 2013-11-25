@@ -17,6 +17,7 @@ namespace Model
     class ManueveringComponent : public ShipComponent {
     public:
         ManueveringComponent() :
+                ShipComponent(),
                 m_fuel_curve(),
                 m_thrust_curve(),
                 m_nozzel_direction(),
@@ -29,6 +30,22 @@ namespace Model
                 m_thrust_slope(0.0),
                 m_thrust_intercept(0.0)
         {};
+        
+        ManueveringComponent(unsigned int id) :
+                ShipComponent(id),
+                m_fuel_curve(),
+                m_thrust_curve(),
+                m_nozzel_direction(),
+                m_percent_thrust(0.0),
+                m_engine_type(UNDEFINED_ENGINE),
+                m_has_calculated_fuel(false),
+                m_has_calculated_thrust(false),
+                m_fuel_slope(0.0),
+                m_fuel_intercept(0.0),
+                m_thrust_slope(0.0),
+                m_thrust_intercept(0.0)
+        {};
+        
         virtual ~ManueveringComponent();
         
         virtual ENGINE_TYPE get_engine_type() { return m_engine_type; };

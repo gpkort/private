@@ -1,12 +1,23 @@
 /* 
  * File:   CrashPadUtils.h
- * Author: Jack
+ * Author: Greg
  *
  * Created on October 7, 2013, 7:33 PM
  */
 
 #ifndef CRASHPADUTILS_H
 #define	CRASHPADUTILS_H
+
+
+enum COMPONENT_TYPE { 
+    PAD_TYPE = 0,          
+    STRUT_TYPE,
+    ENGINE_THRUST_TYPE,           
+    PORT_THRUST_TYPE,
+    STARBOARD_THRUST_TYPE, 
+    FUEL_TANK_TYPE,
+    CARGO_HOLD_TYPE
+};
 
 enum FUEL_TYPE {UNDEFINED_FUEL = 0, LIQUID, SOLID, GAS};
 
@@ -26,6 +37,10 @@ struct DirectionVector {
         z = dv.z;
         
         return *this;
+    }
+    
+    bool operator==(DirectionVector& dv) const {
+        return( x == dv.x && y == dv.y && z == dv.z);
     }
 } ;
     

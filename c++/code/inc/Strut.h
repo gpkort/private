@@ -16,8 +16,10 @@ class Strut : public DurableComponent
 {
 public:
     Strut();
+    Strut(unsigned int id);
     Strut(const Strut& orig);
     Strut & operator=(const Strut& strut);
+    bool operator==(Strut& rhs) const;
     virtual ~Strut();
     
     inline double get_length() { return m_length;};

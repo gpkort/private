@@ -47,6 +47,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/202695825/Thruster.o \
 	${OBJECTDIR}/EngineTesting.o \
 	${OBJECTDIR}/FuelTankTesting.o \
+	${OBJECTDIR}/LandingCraftTesting.o \
 	${OBJECTDIR}/PadTesting.o \
 	${OBJECTDIR}/main.o
 
@@ -142,6 +143,11 @@ ${OBJECTDIR}/FuelTankTesting.o: FuelTankTesting.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -g -I../../../gmock-1.7.0/include -I../../../gmock-1.7.0/gtest/include -I../../../code/inc -MMD -MP -MF $@.d -o ${OBJECTDIR}/FuelTankTesting.o FuelTankTesting.cpp
+
+${OBJECTDIR}/LandingCraftTesting.o: LandingCraftTesting.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -I../../../gmock-1.7.0/include -I../../../gmock-1.7.0/gtest/include -I../../../code/inc -MMD -MP -MF $@.d -o ${OBJECTDIR}/LandingCraftTesting.o LandingCraftTesting.cpp
 
 ${OBJECTDIR}/PadTesting.o: PadTesting.cpp 
 	${MKDIR} -p ${OBJECTDIR}

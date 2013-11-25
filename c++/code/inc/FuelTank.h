@@ -16,6 +16,7 @@ class FuelTank : public DurableComponent
 {
 public:
     FuelTank();
+    FuelTank(unsigned int id);
     FuelTank(std::string name, unsigned int id, 
              double mass, float cost, int points, double capacity,
              double currentAmount = 0.0, FUEL_TYPE fuelType = UNDEFINED_FUEL,
@@ -23,6 +24,7 @@ public:
     FuelTank(const FuelTank& orig);
     
     FuelTank & operator=(const FuelTank& fuelTank);
+    bool operator==(FuelTank& rhs) const;
     virtual ~FuelTank();
     
     inline double get_total_capacity() { return m_total_capacity; }
@@ -36,6 +38,8 @@ public:
     
     inline double get_fuel_density() { return m_fuel_density; }
     inline void  set_fuel_density(double fuelDensity) { m_fuel_density = fuelDensity; }
+    
+    inline double get_remaining_fuel_units() { return m_total_capacity * m_current_amount; }
     
     double get_object_mass();
     
