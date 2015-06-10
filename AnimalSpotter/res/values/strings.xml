@@ -3,5 +3,5 @@
 
     <string name="app_name">AnimalSpotter</string>
     <string name="hello_world">Hello world!</string>
-
+	<string name="app_title">Wildlife Spotter</string>
 </resources>
